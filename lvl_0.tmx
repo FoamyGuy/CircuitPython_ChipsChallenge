@@ -14,106 +14,127 @@
   <tile id="1">
    <properties>
     <property name="can_walk" type="bool" value="true"/>
+    <property name="name" value="conveyor_up"/>
    </properties>
   </tile>
   <tile id="2">
    <properties>
     <property name="can_walk" type="bool" value="true"/>
+    <property name="name" value="conveyor_up"/>
    </properties>
   </tile>
   <tile id="3">
    <properties>
     <property name="can_walk" type="bool" value="true"/>
+    <property name="name" value="conveyor_up"/>
    </properties>
   </tile>
   <tile id="4">
    <properties>
     <property name="can_walk" type="bool" value="true"/>
+    <property name="name" value="conveyor_up"/>
    </properties>
   </tile>
   <tile id="5">
    <properties>
     <property name="can_walk" type="bool" value="true"/>
+    <property name="name" value="conveyor_left"/>
    </properties>
   </tile>
   <tile id="6">
    <properties>
     <property name="can_walk" type="bool" value="true"/>
+    <property name="name" value="conveyor_left"/>
    </properties>
   </tile>
   <tile id="7">
    <properties>
     <property name="can_walk" type="bool" value="true"/>
+    <property name="name" value="conveyor_left"/>
    </properties>
   </tile>
   <tile id="8">
    <properties>
     <property name="can_walk" type="bool" value="true"/>
+    <property name="name" value="conveyor_left"/>
    </properties>
   </tile>
   <tile id="9">
    <properties>
     <property name="can_walk" type="bool" value="true"/>
+    <property name="name" value="conveyor_down"/>
    </properties>
   </tile>
   <tile id="10">
    <properties>
     <property name="can_walk" type="bool" value="true"/>
+    <property name="name" value="conveyor_down"/>
    </properties>
   </tile>
   <tile id="11">
    <properties>
     <property name="can_walk" type="bool" value="true"/>
+    <property name="name" value="conveyor_down"/>
    </properties>
   </tile>
   <tile id="12">
    <properties>
     <property name="can_walk" type="bool" value="true"/>
+    <property name="name" value="conveyor_down"/>
    </properties>
   </tile>
   <tile id="13">
    <properties>
     <property name="can_walk" type="bool" value="true"/>
+    <property name="name" value="conveyor_right"/>
    </properties>
   </tile>
   <tile id="14">
    <properties>
     <property name="can_walk" type="bool" value="true"/>
+    <property name="name" value="conveyor_right"/>
    </properties>
   </tile>
   <tile id="15">
    <properties>
     <property name="can_walk" type="bool" value="true"/>
+    <property name="name" value="conveyor_right"/>
    </properties>
   </tile>
   <tile id="16">
    <properties>
     <property name="can_walk" type="bool" value="true"/>
+    <property name="name" value="conveyor_right"/>
    </properties>
   </tile>
   <tile id="17">
    <properties>
     <property name="can_walk" type="bool" value="true"/>
+    <property name="name" value="ice"/>
    </properties>
   </tile>
   <tile id="18">
    <properties>
     <property name="can_walk" type="bool" value="true"/>
+    <property name="name" value="ice_bottom_right"/>
    </properties>
   </tile>
   <tile id="19">
    <properties>
     <property name="can_walk" type="bool" value="true"/>
+    <property name="name" value="ice_bottom_left"/>
    </properties>
   </tile>
   <tile id="20">
    <properties>
     <property name="can_walk" type="bool" value="true"/>
+    <property name="name" value="ice_top_right"/>
    </properties>
   </tile>
   <tile id="21">
    <properties>
     <property name="can_walk" type="bool" value="true"/>
+    <property name="name" value="ice_top_left"/>
    </properties>
   </tile>
   <tile id="22">
@@ -154,16 +175,19 @@
   <tile id="29">
    <properties>
     <property name="can_walk" type="bool" value="true"/>
+    <property name="name" value="fire"/>
    </properties>
   </tile>
   <tile id="30">
    <properties>
     <property name="can_walk" type="bool" value="true"/>
+    <property name="name" value="fire"/>
    </properties>
   </tile>
   <tile id="31">
    <properties>
     <property name="can_walk" type="bool" value="true"/>
+    <property name="name" value="fire"/>
    </properties>
   </tile>
   <tile id="32">
@@ -311,6 +335,7 @@
   <tile id="60">
    <properties>
     <property name="can_walk" type="bool" value="true"/>
+    <property name="name" value="red_lock"/>
    </properties>
   </tile>
   <tile id="61">
@@ -322,46 +347,55 @@
   <tile id="62">
    <properties>
     <property name="can_walk" type="bool" value="true"/>
+    <property name="name" value="yellow_lock"/>
    </properties>
   </tile>
   <tile id="63">
    <properties>
     <property name="can_walk" type="bool" value="true"/>
+    <property name="name" value="green_lock"/>
    </properties>
   </tile>
   <tile id="64">
    <properties>
     <property name="can_walk" type="bool" value="true"/>
+    <property name="name" value="socket"/>
    </properties>
   </tile>
   <tile id="65">
    <properties>
     <property name="can_walk" type="bool" value="true"/>
+    <property name="name" value="portal"/>
    </properties>
   </tile>
   <tile id="66">
    <properties>
     <property name="can_walk" type="bool" value="true"/>
+    <property name="name" value="portal"/>
    </properties>
   </tile>
   <tile id="67">
    <properties>
     <property name="can_walk" type="bool" value="true"/>
+    <property name="name" value="portal"/>
    </properties>
   </tile>
   <tile id="68">
    <properties>
     <property name="can_walk" type="bool" value="true"/>
+    <property name="name" value="portal"/>
    </properties>
   </tile>
   <tile id="69">
    <properties>
     <property name="can_walk" type="bool" value="true"/>
+    <property name="name" value="microchip"/>
    </properties>
   </tile>
   <tile id="70">
    <properties>
     <property name="can_walk" type="bool" value="true"/>
+    <property name="name" value="red_key"/>
    </properties>
   </tile>
   <tile id="71">
@@ -373,31 +407,37 @@
   <tile id="72">
    <properties>
     <property name="can_walk" type="bool" value="true"/>
+    <property name="name" value="yellow_key"/>
    </properties>
   </tile>
   <tile id="73">
    <properties>
     <property name="can_walk" type="bool" value="true"/>
+    <property name="name" value="green_key"/>
    </properties>
   </tile>
   <tile id="74">
    <properties>
     <property name="can_walk" type="bool" value="true"/>
+    <property name="name" value="skate_boot"/>
    </properties>
   </tile>
   <tile id="75">
    <properties>
     <property name="can_walk" type="bool" value="true"/>
+    <property name="name" value="magnet_boot"/>
    </properties>
   </tile>
   <tile id="76">
    <properties>
     <property name="can_walk" type="bool" value="true"/>
+    <property name="name" value="fire_boot"/>
    </properties>
   </tile>
   <tile id="77">
    <properties>
     <property name="can_walk" type="bool" value="true"/>
+    <property name="name" value="water_boot"/>
    </properties>
   </tile>
   <tile id="78">
@@ -771,14 +811,14 @@
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,66,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,65,0,0,0,61,63,0,0,0,
+0,0,0,0,30,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,62,0,0,0,64,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,62,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,36,0,0,0,0,72,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,119,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,36,0,0,0,0,72,0,0,73,0,0,0,
+0,0,0,0,0,0,0,0,119,0,71,0,74,0,0,
+0,0,0,0,0,70,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,

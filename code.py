@@ -2,6 +2,8 @@ import gc
 
 import board
 import displayio
+import supervisor
+
 from cc_lib import ChipsChallengeGame
 
 import time
@@ -56,6 +58,8 @@ LAST_BTN_TIME = 0
 _cur_player_loc = my_game.player_loc.copy()
 
 print(f"memfree: {gc.mem_free()}")
+
+old_btns = None
 while True:
 
     my_game.game_tick()
@@ -68,30 +72,34 @@ while True:
             if (x < 30):
                 print("left")
                 _next_loc = {"x": my_game.player_loc['x'] - 1, "y": my_game.player_loc['y']}
-                if my_game.is_tile_moveable(_next_loc) and my_game.check_entity_interaction(_next_loc, my_game):
+                if my_game.is_tile_moveable(_next_loc) and my_game.process_before_move(_next_loc, my_game):
                     my_game.player_loc['x'] -= 1
                     my_game.update_player_location()
+                    my_game.process_after_move(_next_loc, my_game)
                 #my_game.player_entity.x -= my_game.player_entity.tilegrid.tile_width
             elif (x > 990):
                 _next_loc = {"x": my_game.player_loc['x'] + 1, "y": my_game.player_loc['y']}
-                if my_game.is_tile_moveable(_next_loc) and my_game.check_entity_interaction(_next_loc, my_game):
+                if my_game.is_tile_moveable(_next_loc) and my_game.process_before_move(_next_loc, my_game):
                     my_game.player_loc['x'] += 1
                     my_game.update_player_location()
+                    my_game.process_after_move(_next_loc, my_game)
                 print("right")
                 #my_game.player_entity.x += my_game.player_entity.tilegrid.tile_width
             if (y < 30):
                 print("down")
                 _next_loc = {"x": my_game.player_loc['x'], "y": my_game.player_loc['y'] + 1}
-                if my_game.is_tile_moveable(_next_loc) and my_game.check_entity_interaction(_next_loc, my_game):
+                if my_game.is_tile_moveable(_next_loc) and my_game.process_before_move(_next_loc, my_game):
                     my_game.player_loc['y'] += 1
                     my_game.update_player_location()
+                    my_game.process_after_move(_next_loc, my_game)
                 #my_game.player_entity.y += my_game.player_entity.tilegrid.tile_width
             elif (y > 990):
                 print("up")
                 _next_loc = {"x": my_game.player_loc['x'], "y": my_game.player_loc['y'] - 1}
-                if my_game.is_tile_moveable(_next_loc) and my_game.check_entity_interaction(_next_loc, my_game):
+                if my_game.is_tile_moveable(_next_loc) and my_game.process_before_move(_next_loc, my_game):
                     my_game.player_loc['y'] -= 1
                     my_game.update_player_location()
+                    my_game.process_after_move(_next_loc, my_game)
                 #my_game.player_entity.y -= my_game.player_entity.tilegrid.tile_width
 
         last_x = x
@@ -105,8 +113,11 @@ while True:
     if not buttons & (1 << BUTTON_Y):
         print("Button Y pressed")
 
-    if not buttons & (1 << BUTTON_A):
+    if not buttons & (1 << BUTTON_A) and old_btns & (1 << BUTTON_A):
         print("Button A pressed")
+        if my_game.game_over:
+            supervisor.reload()
+
 
     if not buttons & (1 << BUTTON_B):
         print("Button B pressed")
@@ -117,4 +128,5 @@ while True:
     if not buttons & (1 << BUTTON_START):
         print("Button Start pressed")
 
+    old_btns = buttons
     time.sleep(0.01)

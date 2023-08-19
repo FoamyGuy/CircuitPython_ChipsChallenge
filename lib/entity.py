@@ -153,7 +153,7 @@ class Entity:
         :return:
         """
 
-    def check_interaction(self, game_obj):
+    def before_move(self, game_obj):
         """
         Subclasses override this to add behavior when player is about to move onto entities tile
         :param game_obj: the game object
@@ -161,7 +161,26 @@ class Entity:
         """
         return True
 
+    def after_move(self, game_obj):
+        """
+        Subclasses override this to add behavior after player is moves onto this entities tile
+        :param game_obj: the game object
+        """
+
 
     def at_coords(self, coords):
         if self.map_loc['x'] == coords['x'] and self.map_loc['y'] == coords['y']:
             return True
+
+
+    def collect_item(self, game_obj, item_name):
+        if item_name in game_obj.inventory.keys():
+            game_obj.inventory[item_name] += 1
+        else:
+            game_obj.inventory[item_name] = 1
+
+        _player_index = game_obj.get_index_from_coords(game_obj.player_loc)
+
+        game_obj.map_obj['layers'][2]['data'][_player_index] = 0
+        game_obj.entities.remove(self)
+        game_obj.remove(self.tilegrid)
